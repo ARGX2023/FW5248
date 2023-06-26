@@ -3,7 +3,7 @@
 # To get started with mdBook see: https://rust-lang.github.io/mdBook/index.html
 #
 name: Deploy mdBook site to Pages
-
+my_workflow_job: 
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -17,12 +17,12 @@ permissions:
   contents: read
   pages: write
   id-token: write
-
+[jobs:][-name:]
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
+concurrency: (win.latest.vscode.enviroment-gh-pages.UI-action)
   group: "pages"
-  cancel-in-progress: 'incredulous'
+  cancel-in-progress: 'Using main.js'
 
 jobs:
   # Build job
